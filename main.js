@@ -152,3 +152,69 @@ const _secondName = 'Fulana';
     const name2 = { first: 'Dicoding', last: undefined };
     console.log(JSON.stringify(name1)); // output: {"first":"Dicoding","last":null}
     console.log(JSON.stringify(name2)); // output: {"first":"Dicoding"}
+
+// ----------------------------------------------------------------------
+
+// KONVERSI ANTAR TIPE DATA
+
+// 1. Konversi Eksplisit
+    // ke String
+    const number1 = 123;
+    const boolean1 = true;
+    const strNumber = String(number1);
+    const strBoolean = boolean1.toString();
+    console.log(strNumber); // output: "123"
+    console.log(strBoolean); // output: "true"
+
+    // ke Number
+    const strFloat1 = '3.14';
+    const boolean2 = true;
+    const numFromString = Number(strNumber);
+    const floatFromString = Number(strFloat1);
+    const numFromBoolean = Number(boolean2);
+    console.log(numFromString); // output: 123
+    console.log(floatFromString); // output: 3.14
+    console.log(numFromBoolean); // output: 1
+
+        // parseInt()
+        const cm1 = '20cm';
+        const px1 = '64px';
+        const intFromCM = parseInt(cm1);
+        const intFromPX = parseInt(px1);
+        console.log(intFromCM); // output: 20
+        console.log(intFromPX); // output: 64
+
+        // parseFloat()
+        const cm2 = '20.55cm';
+        const px2 = '64.23px';
+        const floatFromCM = parseFloat(cm2);
+        const floatFromPX = parseFloat(px2);
+        console.log(floatFromCM); // output: 20.55
+        console.log(floatFromPX); // output: 64.23
+    
+    // ke Boolean
+    const number2 = 123;
+    const string2 = 'Dicoding';
+    const empty2 = null;
+    const boolFromNumber = Boolean(123);
+    const boolFromString = Boolean(string2);
+    const boolFromNull = Boolean(empty2);
+    console.log(boolFromNumber); // output: true
+    console.log(boolFromString); // output: true
+    console.log(boolFromNull); // output: false
+
+// 2. Konversi Implisit
+    // Number ke String
+    const age2 = 20;
+    const message3 = 'Umurku: ' + age2;
+    console.log(message3); // output: Umurku: 20
+
+    // Age ke String
+    const strNumber2 = '123';
+    const result3 = strNumber2 * 2;
+    console.log(result3); // output: 246
+
+    // Boolean ke Number
+    const bool = true;
+    const result4 = 1 + bool;
+    console.log(result4); // output: 2
