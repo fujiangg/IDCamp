@@ -218,3 +218,57 @@ const _secondName = 'Fulana';
     const bool = true;
     const result4 = 1 + bool;
     console.log(result4); // output: 2
+
+// ----------------------------------------------------------------------
+
+// OPERATOR
+// Kelompok operator :
+        let age3 = 25;
+    // 1. Unary operator
+        typeof age3;
+    // 2. Binary operator
+        5 + 4;
+        10 / 2;
+        age3 = 30;
+    // 3. Ternary operator (conditional operator)
+        (age3 < 18) ? 'You are too young!' : 'Welcome onboard!'; 
+
+// Jenis operator
+    // 1. Arithmetic Operator
+        6 + 5; // mengembalikan 11
+        7 - 2; // mengembalikan 5
+        8 * 5; // mengembalikan 40
+        10 / 3; // mengembalikan 3.33
+        10 % 2; // mengembalikan 0
+        // 2  (10 + 2); // mengembalikan 24
+
+    // 2. Comparison Operator
+        const a = 10;
+        const b = 12;       
+        console.log(a < b); // output: true
+        console.log(a > b); // output: false
+
+    // 3. Logical Operator
+        // AND
+        console.log(true && true); // true
+        console.log(false && true); // false
+        console.log(true && false); // false
+        console.log(false && false); // false
+        console.log((5 === 5) && (3 < 5)); // true
+        
+        // OR
+        console.log(true || true); // true
+        console.log(false || true); // true
+        console.log(true || false); // true
+        console.log(false || false); // false
+        console.log((5 === 5) || (3 > 5)); // true
+        
+        // NOT
+        console.log(!true); // false
+        console.log(!false); // true
+
+    // 3. String Operator
+        const first = 'bekerja';
+        const second = 'sama';
+        const merged = first + second;
+        console.log(merged); // Output: bekerjasama
