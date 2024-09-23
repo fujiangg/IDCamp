@@ -49,3 +49,10 @@ console.log(convertCelsiusToFahrenheit2);
 // Akan menjalankan isi function
 convertCelsiusToFahrenheit(temperatureInCelsius);
 // Output => Hasil konversi: 194
+
+// Fitur Hoisting
+greetWorld();
+
+function greetWorld() {
+  console.log('Hello, world!');
+}
