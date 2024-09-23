@@ -101,3 +101,41 @@ const temperature = 90;
 const temperatureInFahrenheit3 = convertCelsiusToFahrenheit3(temperature);
 console.log('Hasil konversi:', temperatureInFahrenheit3);
   
+// ----------------------------------------------------------------------
+
+// FUNCTION EXPRESSION //
+
+function convertCelsiusToFahrenheit4 (temperature) {
+    const result = (9 / 5) * temperature + 32;
+    return result;
+};
+  
+const temperatureInFahrenheit4 = convertCelsiusToFahrenheit4(90);
+console.log('Hasil konversi:', temperatureInFahrenheit4);
+
+// First-Class Citizen
+    // Nilai argumen function lain
+    function multiply(a, b) {
+        return a * b;
+    }
+      
+    function calculate(operation, numA, numB) {
+        return operation(numA, numB);
+    }
+      
+    const result2 = calculate(multiply, 2, 4);
+    console.log(result2);
+    
+    // Mengembalikan nilai function dari suatu funtion
+    function multiplier(x) {
+        return function (num) {
+          return x * num;
+        };
+    }
+      
+    const double = multiplier(2);
+    const triple = multiplier(3);
+      
+    console.log(double(10));
+    console.log(triple(11));
+      
