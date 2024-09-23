@@ -139,3 +139,46 @@ console.log('Hasil konversi:', temperatureInFahrenheit4);
     console.log(double(10));
     console.log(triple(11));
       
+// ----------------------------------------------------------------------
+
+// ARROW FUNCTION //
+let temperatureInFahrenheit5 = null;
+
+// Deklarasi function dengan Regular Function
+const convertCelsiusToFahrenheitUsingRegularFunction = function (temperature) {
+  const result = (9 / 5) * temperature + 32;
+  return result;
+};
+
+temperatureInFahrenheit5 = convertCelsiusToFahrenheitUsingRegularFunction(90);
+console.log('Hasil konversi:', temperatureInFahrenheit5);
+// Hasil ==> Hasil konversi: 194
+
+// Deklarasi Function dengan Arrow Function
+const convertCelsiusToFahrenheitUsingArrowFunction = (temperature) => {
+  const result = (9 / 5) * temperature + 32;
+  return result;
+};
+
+temperatureInFahrenheit5 = convertCelsiusToFahrenheitUsingArrowFunction(90);
+console.log('Hasil konversi:', temperatureInFahrenheit5);
+// Hasil ==> Hasil konversi: 194
+
+    // Refactor
+    let temperatureInFahrenheit6;
+
+    // Arrow function
+    const convertCelsiusToFahrenheit5 = (temperature) => {
+    const result = (9 / 5) * temperature + 32;
+    return result;
+    };
+
+    temperatureInFahrenheit6 = convertCelsiusToFahrenheit5(90);
+    console.log('Hasil konversi:', temperatureInFahrenheit6);
+
+    // Arrow function versi ringkas
+    const convertCelsiusToFahrenheitInConciseSyntax = 
+    (temperature) => (9 / 5) * temperature + 32;
+
+    temperatureInFahrenheit6 = convertCelsiusToFahrenheitInConciseSyntax(90);
+    console.log('Hasil konversi:', temperatureInFahrenheit6);
