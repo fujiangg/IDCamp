@@ -72,3 +72,32 @@ convertCelsiusToFahrenheit(); // output: Hasil konversi: 122
   
 // Menggantikan default value
 convertCelsiusToFahrenheit(90); // output: Hasil konversi: 194
+
+// ----------------------------------------------------------------------
+
+// RETURN VALUE //
+function sumNumbers(a, b) {
+    const result = a + b;
+    return result;
+}
+  
+const result = sumNumbers(2, 4);
+console.log('2 + 4:', result);
+  
+function generateGreetingWorldMessage() {
+    return 'Halo, dunia!';
+    console.log('Aku tidak akan tampil!');
+}
+   
+const message = generateGreetingWorldMessage();
+console.log(message);
+   
+function convertCelsiusToFahrenheit3(temperature) {
+    const result = (9 / 5) * temperature + 32;
+    return result;
+}
+
+const temperature = 90;
+const temperatureInFahrenheit3 = convertCelsiusToFahrenheit3(temperature);
+console.log('Hasil konversi:', temperatureInFahrenheit3);
+  
