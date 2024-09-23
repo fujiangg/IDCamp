@@ -30,3 +30,22 @@ function convertCelsiusToFahrenheit(temperature) {
    
     console.log('Hasil konversi:', temperatureInFahrenheit);
 }
+
+// ----------------------------------------------------------------------
+
+// PEMANGGILAN FUNCTION //
+function convertCelsiusToFahrenheit2(temperature2) {
+    const temperatureInFahrenheit = (9 / 5) * temperature2 + 32;
+
+    console.log('Hasil Konversi:', temperatureInFahrenheit2)
+}
+
+const temperatureInCelsius3 = 90;
+
+// Hanya menampilkan nilai function
+console.log(convertCelsiusToFahrenheit2);
+// Output => [Function: convertCelciusToFahrenheit2]
+
+// Akan menjalankan isi function
+convertCelsiusToFahrenheit(temperatureInCelsius);
+// Output => Hasil konversi: 194
