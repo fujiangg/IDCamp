@@ -20,4 +20,13 @@ console.log('Hasil konversi:', temperatureInFahrenheit2); // output -> Hasil kon
 
 temperatureInCelsius2 = 100;
 temperatureInFahrenheit2 = 9 / 5 * temperatureInCelsius2 + 32;
-console.log('Hasil konversi:', temperatureInFahrenheit2); // output -> Hasil konversi: 212
+console.log('Hasil konversi:', temperatureInFahrenheit2); // output -> Hasil konversi: 
+
+// ----------------------------------------------------------------------
+
+// DEKLARASI FUNCTION //
+function convertCelsiusToFahrenheit(temperature) {
+    const temperatureInFahrenheit = 9 / 5 * temperature + 32;
+   
+    console.log('Hasil konversi:', temperatureInFahrenheit);
+}
