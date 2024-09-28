@@ -258,3 +258,41 @@ const original = ['apple', 'banana', 'cherry'];
 const copy = [...original];
 
 console.log(copy); // Output: ['apple', 'banana', 'cherry']
+
+// ----------------------------------------------------------------------
+
+// REST OPERATOR
+// Menangani Argument yang banyak pada parameter function
+function myFunc1(...manyMoreArgs) {
+    console.log('manyMoreArgs', manyMoreArgs);
+  }
+  
+myFunc1('one', 'two', 'three'); // Output: manyMoreArgs [ 'one', 'two', 'three' ]
+
+function myFunc2(number, ...manyMoreArgs) {
+    console.log('number', number);
+    console.log(manyMoreArgs.length)
+    console.log('manyMoreArgs', manyMoreArgs);
+  }
+  
+myFunc2('one', 'two', 'three');
+  
+// Output:
+// number one
+// manyMoreArgs [ 'two', 'three' ]
+
+// Menangkap sisa elemen akhir dalam destructuring array
+const favorites = ['Nasi Goreng', 'Mie Goreng', 'Ayam Bakar', 'Tahu', 'Tempe'];
+
+const [first, second, ...rest] = favorites;
+
+console.log(first);
+console.log(second);
+console.log(rest);
+
+/**
+ * output:
+ * Nasi Goreng
+ * Mie Goreng
+ * [ 'Ayam Bakar', 'Tahu', 'Tempe' ]
+ */
