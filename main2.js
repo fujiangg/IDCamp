@@ -182,3 +182,38 @@ console.log('Hasil konversi:', temperatureInFahrenheit5);
 
     temperatureInFahrenheit6 = convertCelsiusToFahrenheitInConciseSyntax(90);
     console.log('Hasil konversi:', temperatureInFahrenheit6);
+
+// ----------------------------------------------------------------------
+
+// KUIS CODING
+
+/**
+ * TODO:
+ * 1. Buatlah sebuah fungsi bernama `hello` yang menerima 2 argumen: `name` dan `origin`.
+ * 2. Kembalikan fungsi tersebut dengan nilai string dengan templat:
+ *    "Halo! Nama saya (name). Saya tinggal di (origin)."
+ *
+ *    Contoh: Jika `name` bernilai 'Fulan' dan `origin` bernilai 'Jakarta', fungsi harus mengembalikan:
+ *    "Halo! Nama saya Fulan. Saya tinggal di Jakarta.".
+ *
+ * 3. Argumen `origin` boleh kosong dengan nilai default adalah "Bandung".
+ * 4. Buatlah variabel bernama `rahmat` yang menampung nilai dari hasil pemanggilan fungsi `hello`
+ *    yang diberikan argumen name = 'Rahmat' dan origin = 'Semarang'.
+ * 5. Buatlah variabel bernama `indra` yang menampung nilai dari hasil pemanggilan fungsi `hello`
+ *    yang diberikan argumen name = 'Indra' tanpa memberikan nilai origin.
+ */
+function hello(name, origin = 'Bandung') {
+    return `Halo! Nama saya ${name}. Saya tinggal di ${origin}.`;
+}
+// Mengembalikan
+let fulan = hello ("Fulan", "Jakarta");
+
+// Variabel rahmat dengan argumen name dan origin
+let rahmat = hello("Rahmat", "Semarang");
+
+// Variabel indra dengan argumen name tanpa origin
+let indra = hello("Indra");
+
+console.log(fulan);
+console.log(rahmat); // Output: Halo! Nama saya Rahmat. Saya tinggal di Semarang.
+console.log(indra);  // Output: Halo! Nama saya Indra. Saya tinggal di tempat yang tidak diketahui.
