@@ -183,3 +183,47 @@ map5.set('last name', 'opraza');
 map5.delete('last name');
 
 console.log(map5); // Map(1) { 'name' => 'aras' }
+
+// ----------------------------------------------------------------------
+
+// MENSTRUKTURKAN DATA DENGAN SET
+// MEMBUAT SET
+const set1 = new Set();
+
+const mySet = new Set([1, 2, 3]);
+console.log(mySet); // Output: Set(3) { 1, 2, 3 }
+
+// MENYIMPAN NILAI di SET
+const set2 = new Set();
+set2.add(1);
+set2.add('Apple');
+set2.add(1);
+set2.add('Apple');
+
+console.log(set2); // Output: Set { 1, 'Apple' }
+
+// MENGAKSES NILAI di Set
+// 1. For
+    const set3 = new Set();
+    set3.add(1);
+    set3.add(2);
+
+    console.log(set3); // Output: Set(2) { 1, 2 }
+
+    for (const number of set3) {
+    console.log(number); // Output: 1, 2
+    }
+// 2. Foreach
+    const set4 = new Set();
+    set4.add(1);
+    set4.add(2);
+
+    set4.forEach((value) => console.log(value)); // Output: 1, 2
+
+// MENGHAPUS NILAI di SET
+const set5 = new Set();
+set5.add(1);
+set5.add(2);
+set5.delete(1);
+
+console.log(set5); // Set(1) { 2 }
