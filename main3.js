@@ -144,3 +144,42 @@ console.log(greeting); // Output: Hello
 // 3. Typeof
     const array11 = [1, 2];
     console.log(typeof array11); // Output: object
+
+// ----------------------------------------------------------------------
+
+// MENSTRUKTURKAN DATA DENGAN MAP
+// MEMBUAT MAP
+const map1 = new Map();
+
+const productMap = new Map([
+    ['shoes', 500],
+    ['cap', 350],
+    ['jeans', 250]
+  ]);
+  
+console.log(productMap);
+
+// MENYIMPAN NILAI DI MAP
+const map2 = new Map();
+map2.set('name', 'aras');
+
+console.log(map2); // Map(1) { 'name' => 'aras' }
+
+const map3 = new Map();
+map3.set(1, 'number one');
+
+console.log(map3); // Map(1) { 1 => 'number one' }
+
+// MENGAKSES NILAI DI MAP
+const map4 = new Map();
+map4.set('name', 'aras');
+
+console.log(map4.get('name')); // Output: aras
+
+// MENGHAPUS NILAI DI MAP
+const map5 = new Map();
+map5.set('name', 'aras');
+map5.set('last name', 'opraza');
+map5.delete('last name');
+
+console.log(map5); // Map(1) { 'name' => 'aras' }
