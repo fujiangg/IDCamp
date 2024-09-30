@@ -203,3 +203,54 @@ do {
     }
     console.log(i);
   }
+
+// ----------------------------------------------------------------------
+
+// ERROR HANDLING
+// THROWING ERROR
+/* const error = new Error('Terjadi error');
+console.error(error);
+ */
+
+/* const harga = 100;
+const bayar = 80;
+
+if (bayar < harga) {
+  throw new Error('Pembayaran kurang');
+}
+ */
+
+// CATCHING ERROR
+  // Try Catch
+  try {
+    console.log('Memulai program');
+    console.log('Mengakhiri program');
+  } catch (err) {
+    console.log('Karena tidak ada error, blok ini akan diabaikan');
+  }
+
+  try {
+    console.log('Memulai program');
+    throw new Error('Error: Program berhenti');
+    console.log('Mengakhiri program');
+  } catch (err) {
+    console.log('Karena ada error, blok ini akan dieksekusi');
+  }
+
+  // Finally
+  try {
+    console.log('Ini try block');
+  } catch (err) {
+    console.log('Ini catch block');
+  } finally {
+    console.log('Ini finally block');
+  }
+
+  try {
+    console.log('Ini try block');
+    throw new Error('Error: Program berhenti');
+  } catch (err) {
+    console.log('Ini catch block');
+  } finally {
+    console.log('Ini finally block');
+  }
