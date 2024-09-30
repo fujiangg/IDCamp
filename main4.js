@@ -137,3 +137,69 @@ switch (day_switch) {
     console.log('Hari tidak valid');
 }
 
+// ----------------------------------------------------------------------
+
+// LOOPING
+// FOR
+    // 1. For Loop
+    for (let i = 0; i < 5; i++) {
+        console.log(`Angka ke-${i} adalah ${i}`);
+    }
+
+    // 2. For In
+    const person = { name: 'Fulan', origin: 'Bandung', birthYear: 2024 };
+
+    for (const property in person) {
+    console.log(`${property} bernilai ${person[property]}`);
+    }
+
+    // 3. For Of
+    const names = ['Bebek', 'Ayam', 'Telor', 'Tempe'];
+
+    for (const item of names) {
+    console.log(item);
+    }
+
+// WHILE
+let i = 0;
+
+while (i < 5) {
+  console.log(`Angka ke-${i} adalah ${i}.`);
+  i++;
+}
+
+// Contoh Infinity Looping
+/* let a = 0;
+ *
+ * while (a < 5) {
+ *   console.log(`Angka ke-${a} adalah ${a}.`);
+ * } 
+ * 
+ */
+
+// DO-WHILE
+let d = 0;
+
+do {
+  console.log(`Angka ke-${d} adalah ${d}.`);
+  d++;
+} while (d < 5);
+
+// CONTROL STATEMENT
+  // 1. Break
+  for (let i = 0; i < 10; i++) {
+    if (i === 5) {
+      break;
+    }
+  
+    console.log(i);
+  }
+  // Bisa juga digunakan di conditional (switch case)
+
+  // 2. Continue
+  for (let i = 0; i < 10; i++) {
+    if (i === 5) {
+        continue;
+    }
+    console.log(i);
+  }
