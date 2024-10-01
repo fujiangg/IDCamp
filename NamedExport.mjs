@@ -8,3 +8,17 @@ const age = 25;
 const telp = '081234560987'
 
 export { name, email, age, telp };
+
+// Contoh sebelum diinisialisasi
+
+export const nama = 'John';
+export const surel = 'john@gmail.com';
+export const usia = 25;
+
+// Contoh setelah diinisialisasi (menggunakan kurung kurawal)
+
+const nama = 'John';
+const surel = 'john@gmail.com';
+const usia = 25;
+ 
+export { nama, surel, usia };
