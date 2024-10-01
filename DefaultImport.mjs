@@ -5,4 +5,3 @@ myFunction();
 import result from './DefaultExport.mjs';
 
 result();
-
