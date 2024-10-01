@@ -20,3 +20,15 @@ import { myFunction as NamedExport3Function } from './NamedExport3.mjs';
 
 NamedExport2Function();
 NamedExport3Function();
+
+import { fullName, favoriteFood as food, sayHi } from './NamedExport.mjs';
+
+console.log(fullName);
+console.log(food);
+sayHi(fullName);
+
+import * as user from './NamedExport.mjs';
+ 
+console.log(user.fullName);
+console.log(user.favoriteFood);
+user.sayHi(user.fullName);
