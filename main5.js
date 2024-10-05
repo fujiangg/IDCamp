@@ -44,6 +44,8 @@
   student1.study(); // Output: Alice is studying
   student2.study(); // Output: Bob is studying
 
+// ----------------------------------------------------------------------
+
 // INSTANCE
 // 1. ES6
     class SmartPhones {
@@ -125,3 +127,66 @@
 // Mengetahui asal muasal class
 console.log(ios instanceof SmartPhones); // Output: true
 console.log(android instanceof SmartPhones); // Output: true
+
+// ----------------------------------------------------------------------
+
+// ENCAPSULATION
+// Before Encapsulation
+class CoffeMachine {
+    constructor(waterAmount) {
+      this.waterAmount = waterAmount;
+      this.temperature = 90;
+    }
+  
+    makeCoffe() {
+      console.log('Membuat kopi dengan suhu', this.temperature);
+    }
+}
+  
+const coffee = new CoffeMachine(100);
+coffee.temperature = 60;
+  
+coffee.makeCoffe(); // Output: Membuat kopi dengan suhu 60
+
+// After Encapsulation (tetapi masih bisa diubah)
+class CoffeeMachine2 {
+    constructor(waterAmount) {
+      this.waterAmount = waterAmount;
+      this._temperature = 90
+    }
+  
+    set temperature(temperature) {
+      console.log('you are not allowed to change the temperature');
+    }
+  
+    get temperature() {
+      return this._temperature;
+    }
+}
+  
+const coffee2 = new CoffeeMachine2(10);
+console.log('Sebelum diubah: ', coffee2.temperature);
+coffee2.temperature = 100;
+console.log('Setelah diubah: ', coffee2.temperature);
+
+// After Encapsulation (tidak bisa diubah)
+class CoffeeMachine3 {
+    #temperature = 90;
+  
+    constructor(waterAmount) {
+      this.waterAmount = waterAmount;
+      this.#temperature = this.#defaultTemperature();
+    }
+  
+    set temperature(temperature) {
+      console.log('you are not allowed to change the temperature');
+    }
+  
+    get temperature() {
+      return this.#temperature;
+    }
+  
+    #defaultTemperature() {
+      return 90;
+    }
+}
