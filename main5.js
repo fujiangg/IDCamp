@@ -190,3 +190,35 @@ class CoffeeMachine3 {
       return 90;
     }
 }
+
+// ----------------------------------------------------------------------
+
+// POLYMORPHISM
+// OVERRIDING 
+class SmartPhones2 {
+  constructor(color, brand, model) {
+    this.color = color;
+    this.brand = brand;
+    this.model = model;
+  }
+
+  charging() {
+    console.log(`Charging ${this.model}`);
+  }
+}
+
+class Android2 extends SmartPhones2 {
+  // Overriding Constructor
+  constructor(color, brand, model, device) {
+    super(color, brand, model);
+    this.device = device;
+  }
+
+  splitScreen() {
+    console.log(`Android have a Split Screen`);
+  }
+}
+
+const android2 = new Android2('white', 'B', 'Galaxy S21', 'Smart TY');
+
+console.log(`This SmartPhones has ${android2.color} color`);
