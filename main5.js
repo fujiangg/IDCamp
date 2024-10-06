@@ -214,6 +214,12 @@ class Android2 extends SmartPhones2 {
     this.device = device;
   }
 
+  charging() {
+    // Overriding Method
+    super.charging();
+    console.log(`Charging ${this.model} with fast charger`);
+  }
+
   splitScreen() {
     console.log(`Android have a Split Screen`);
   }
@@ -222,3 +228,4 @@ class Android2 extends SmartPhones2 {
 const android2 = new Android2('white', 'B', 'Galaxy S21', 'Smart TY');
 
 console.log(`This SmartPhones has ${android2.color} color`);
+android2.charging();
