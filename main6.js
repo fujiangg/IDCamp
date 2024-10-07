@@ -218,3 +218,28 @@ const numbers = [1, 2, 3, 4];
 const doubled = numbers.map((num) => num * 2);
 
 console.log(doubled); // [2, 4, 6, 8]
+
+// ----------------------------------------------------------------------
+
+// RECURSIVE
+// For Loop
+function generateArray(n) {
+  const result = [];
+  for (let counter = 0; counter <= n; counter += 1) {
+    result.push(counter);
+  }
+  return result;
+}
+
+console.log(generateArray(5)); // Output: [0, 1, 2, 3, 4, 5]
+
+// Recursive
+function generateArray2(n) {
+  if (n < 0) {
+    return [];
+  }
+
+  return [...generateArray2(n - 1), n];
+}
+
+console.log(generateArray2(5)); // Output: [0, 1, 2, 3, 4, 5]
