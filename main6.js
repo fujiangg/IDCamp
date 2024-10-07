@@ -9,3 +9,10 @@ for(let i = 0; i < names.length; i++) {
 }
 
 console.log(newNamesWithExcMark); // output: [ 'Harry!', 'Ron!', 'Jeff!', 'Thomas!' ]s
+
+// DEKLARATIF STYLE
+const firstNames = ['Harry', 'Ron', 'Jeff', 'Thomas'];
+
+const newFirstNamesWithExcMark = firstNames.map((firstNames) => `${firstNames}!`);
+
+console.log(newFirstNamesWithExcMark); // output: [ 'Harry!', 'Ron!', 'Jeff!', 'Thomas!' ]
