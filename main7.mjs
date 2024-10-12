@@ -11,11 +11,13 @@ setTimeout(() => {
 Hello, world!
 */
 
-import { makeCoffee } from './coffee.mjs';
+import { makeCoffee, sendCoffee } from './coffee.mjs';
 
 console.log('Saya memesan kopi di kafe.');
 
 makeCoffee(() => {
-  console.log('Pramusaji memberikan kopi pesanan.');
-  console.log('Saya mendapatkan kopi dan menghabiskannya.');
+  sendCoffee(() => {
+    console.log('Pramusaji memberikan kopi pesanan.');
+    console.log('Saya mendapatkan kopi dan menghabiskannya.');
+  });
 });
