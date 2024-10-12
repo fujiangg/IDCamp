@@ -23,3 +23,14 @@ export function makeCoffee(callback) {
       callback();
     }, estimationTime);
   }
+
+  export function drinkCoffee(callback) {
+    const estimationTime = 5000;
+
+    console.log('Kopi terlihat sangat enak!')
+
+    setTimeout(() => {
+      console.log('Saya menikmati kopinya.');
+      callback();
+    }, estimationTime);
+  }
