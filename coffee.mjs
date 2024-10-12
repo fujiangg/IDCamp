@@ -1,4 +1,4 @@
-export function makeCoffee() {
+export function makeCoffee(callback) {
     // 1000 milidetik = 1 detik
     const estimationTime = 5000;
   
@@ -8,5 +8,7 @@ export function makeCoffee() {
     setTimeout(() => {
       // Do some tasks to make coffee...
       console.log('Pramusaji selesai membuat kopi.');
+
+      callback();
     }, estimationTime);
   }
