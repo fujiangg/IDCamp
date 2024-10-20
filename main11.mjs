@@ -16,3 +16,28 @@ Promise.all([promise1, promise2, promise3])
 Failed
 Ups!
 */
+
+Promise.allSettled([promise1, promise2, promise3])
+  .then((values) => {
+    console.log('Success');
+    console.log(values);
+  })
+  .catch((error) => {
+    console.log('Failed');
+    console.log(error.message);
+  });
+
+/* Output:
+Success
+[
+  { status: 'fulfilled', value: 1 },
+  {
+    status: 'rejected',
+    reason: Error: Ups!
+        at Timeout._onTimeout (file:///home/nurrizkiadip/static-method.mjs:2:75)
+        at listOnTimeout (node:internal/timers:573:17)
+        at process.processTimers (node:internal/timers:514:7)
+  },
+  { status: 'fulfilled', value: 3 }
+]
+*/
