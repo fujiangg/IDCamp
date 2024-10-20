@@ -1,4 +1,7 @@
-export function makeCoffee(name, callback) {
+import { resolve } from "path";
+
+export function makeCoffee(name) {
+  return new Promise((resolve, reject) => {
     // 1000 milidetik = 1 detik
     const estimationTime = 5000;
     let isSuccess = false;
@@ -14,16 +17,18 @@ export function makeCoffee(name, callback) {
       }
 
       if (!isSuccess) {
-        callback(new Error('Gagal membuatkan kopi.'), null);
+        reject(new Error('Maaf, Gagal membuatkan kopi.'));
         return;
       }
 
       console.log('Pramusaji selesai membuat kopi.');
-      callback(null, name);
+      resolve(name);
     }, estimationTime);
-  }
+  });
+}
 
-  export function sendCoffee(name, callback) {
+export function sendCoffee(name) {
+  return new Promise((resolve, reject) => {
     const estimationTime = 2000;
     let isSuccess = false;
 
@@ -37,11 +42,12 @@ export function makeCoffee(name, callback) {
       }
 
       if (!isSuccess) {
-        callback(new Error('Gagal mengantarkan kopi.'), null);
+        reject(new Error('Maaf, kopi Gagal diantarkan.'), null);
         return;
       }
 
       console.log('Pramusaji sudah sampai ke meja.');
-      callback(null, name);
+      resolve(name);
     }, estimationTime);
-  }
+  });
+}
