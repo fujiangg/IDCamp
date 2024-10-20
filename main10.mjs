@@ -1,12 +1,16 @@
 import { doSomething } from './utils.mjs';
 
 async function promiseWithAsyncAwait() {
-    console.log('Start.');
+    try {
+        console.log('Start.');
 
-    const result = await doSomething();
-    console.log(result);
+        const result = await doSomething();
+        console.log(result);
 
-    console.log('End.');
+        console.log('End.');
+    } catch (error) {
+        console.log(error.message);
+    }
 }
 
 promiseWithAsyncAwait();
