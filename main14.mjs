@@ -10,6 +10,7 @@
 * greet(123); 
 */
 
+// Flow remove types
 const myName = 'Flow';
  
 function greet(name) {
