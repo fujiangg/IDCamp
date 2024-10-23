@@ -52,4 +52,3 @@ describe('Calculator', () => {
         assert.throws(potentialErrorToBeThrew, Error);
     }); 
 })
-
