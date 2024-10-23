@@ -6,12 +6,12 @@
 * 3. Function add membangkitkan error jika nilai argumen dari numB tidak bertipe number
 */
 
-import { describe, test } from 'node:test';
+import { describe, it } from 'node:test';
 import assert from 'node:assert';
 import { add } from './calculator.mjs';
 
 describe('Calculator', () => {
-   test('should add correctly', () => {
+   it('should add correctly', () => {
         // Arrange
         const operandA = 1;
         const operandB = 1;
@@ -24,7 +24,7 @@ describe('Calculator', () => {
         assert.equal(actualValue, expectedValue);
     });
 
-    test('should throw an error if string passed on numA parameter', () => {
+    it('should throw an error if string passed on numA parameter', () => {
         const potentialErrorToBeThrew = () => {
             // Arrange
             const operandA = '5';
@@ -38,7 +38,7 @@ describe('Calculator', () => {
         assert.throws(potentialErrorToBeThrew, Error);
     });
 
-    test('should throw an error if string passed on numB parameter', () => {
+    it('should throw an error if string passed on numB parameter', () => {
         const potentialErrorToBeThrew = () => {
             // Arrange
             const operandA = 10;
