@@ -1,0 +1,24 @@
+// TESTING DALAM NODE.JS
+
+/* SKENARIO :
+* 1. Function add dapat mengoperasikan penjumlahan aritmetika dengan baik.
+* 2. Function add membangkitkan error jika nilai argumen dari numA tidak bertipe number.
+* 3. Function add membangkitkan error jika nilai argumen dari numB tidak bertipe number
+*/
+
+import { test } from 'node:test';
+import assert from 'node:assert';
+import { add } from './calculator.mjs';
+
+test('should add correctly', () => {
+    // Arrange
+    const operandA = 1;
+    const operandB = 1;
+
+    // Action
+    const actualValue = add(operandA, operandB);
+
+    // Assert
+    const expectedValue = 2;
+    assert.equal(actualValue, expectedValue);
+});
